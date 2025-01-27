@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Personal Finance Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Monthly Budget Section -->
+    <section id="budget-section">
+      <h2>Set Monthly Budget</h2>
+      <form id="set-budget-form">
+        <input type="number" id="monthly-budget" placeholder="Enter monthly budget" required>
+        <button type="submit">Set Budget</button>
+      </form>
+      <p>Current Budget: $<span id="current-budget">0</span></p>
+      <p>Remaining Budget: $<span id="remaining-budget">0</span></p>
+    </section>
+
+    <!-- Form to Add Expense -->
+    <section id="expense-form">
+      <h2>Add Expense</h2>
+      <form id="add-expense">
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <select id="category">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Others">Others</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Expense List -->
+    <section id="expense-list">
+      <h2>Expense History</h2>
+      <ul id="expenses">
+        <!-- Expenses will be dynamically added here -->
+      </ul>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Total Expenses: <span id="total-expenses">0</span></p>
+    </section>
+
+    <!-- Chart Section -->
+    <section id="chart-section">
+      <h2>Spending by Category</h2>
+      <canvas id="spending-chart"></canvas>
+    </section>
+
+    <!-- Dark Mode Toggle -->
+    <section id="dark-mode-toggle">
+      <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
